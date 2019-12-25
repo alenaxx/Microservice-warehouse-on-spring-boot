@@ -6,8 +6,8 @@ import java.util.UUID;
 
 public class Item {
     private final UUID id;
-    private final String name;
-    private final float price;
+    private  String name;
+    private  float price;
     private int actualAmount;
     private int availableAmount;
 
@@ -19,17 +19,34 @@ public class Item {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public float getPrice() {
         return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 
     public int getActualAmount() {
         return actualAmount;
     }
 
+    public void setActualAmount(int actualAmount) {
+        this.actualAmount = actualAmount;
+    }
+
     public int getAvailableAmount() {
         return availableAmount;
     }
+
+    public void setAvailableAmount(int availableAmount) {
+        this.availableAmount = availableAmount;
+    }
+
 
     public Item(@JsonProperty("id") UUID id,
                 @JsonProperty("name") String name,
@@ -42,4 +59,6 @@ public class Item {
         this.actualAmount = actualAmount;
         this.availableAmount = availableAmount;
     }
+
+
 }

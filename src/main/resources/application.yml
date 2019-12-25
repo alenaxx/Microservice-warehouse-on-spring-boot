@@ -4,3 +4,22 @@ app:
     username: postgres
     password: password
     pool-size: 30
+
+server:
+      port: 9015
+
+spring:
+  application:
+    name: warehouse-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+#eureka:
+#  client:
+#     serviceUrl:
+#        defaultZone: http://localhost:8761/eureka
+#     instance:
+#            preferIpAddress: true

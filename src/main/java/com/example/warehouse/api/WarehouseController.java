@@ -2,7 +2,6 @@ package com.example.warehouse.api;
 
 import com.example.warehouse.model.Item;
 import com.example.warehouse.service.WarehouseService;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,10 +29,9 @@ public class WarehouseController {
         return warehouseService.getAllItems();
     }
 
-    @GetMapping(path = "/items/{id}")
+    @GetMapping(path = "/items/{id}/amount")
     public Item getItemById(@PathVariable("id") UUID id) {
-        return warehouseService.getItemById(id)
-                .orElse(null);
+        return warehouseService.getItemById(id);
     }
 
 
