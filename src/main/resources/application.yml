@@ -6,20 +6,19 @@ app:
     pool-size: 30
 
 server:
-      port: 9015
+    port: 9015
 
 spring:
   application:
-    name: warehouse-service
+    name: warehouse-client
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
-
-#eureka:
-#  client:
-#     serviceUrl:
-#        defaultZone: http://localhost:8761/eureka
-#     instance:
-#            preferIpAddress: true
+  eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka
+    instance:
+      preferIpAddress: true

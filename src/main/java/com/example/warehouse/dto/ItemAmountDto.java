@@ -25,4 +25,3 @@ public class ItemAmountDto {
         this.amount = amount;
     }
 }
-

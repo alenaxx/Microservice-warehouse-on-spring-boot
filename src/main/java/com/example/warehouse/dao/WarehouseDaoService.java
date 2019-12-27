@@ -36,8 +36,8 @@ public class WarehouseDaoService implements WarehouseDao {
             UUID id = UUID.fromString(resultSet.getString("id"));
             String name = resultSet.getString("name");
             float price = resultSet.getFloat("price");
-            int actualamount = resultSet.getInt("actualamount");
-            int availableamount = resultSet.getInt("availableamount");
+            int actualamount = resultSet.getInt("actualAmount");
+            int availableamount = resultSet.getInt("availAbleamount");
             return new Item(id, name, price, actualamount, availableamount);
         });
 
@@ -50,8 +50,8 @@ public class WarehouseDaoService implements WarehouseDao {
             UUID itemId = UUID.fromString(resultSet.getString("id"));
             String name = resultSet.getString("name");
             float price = resultSet.getFloat("price");
-            int actualamount = resultSet.getInt("actualamount");
-            int availableamount = resultSet.getInt("availableamount");
+            int actualamount = resultSet.getInt("actualAmount");
+            int availableamount = resultSet.getInt("availableAmount");
             return new Item(itemId, name, price, actualamount, availableamount);
         });
         return item;
